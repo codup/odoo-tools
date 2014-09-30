@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <record id="view_header_webkit_form" model="ir.ui.view">
+        <field name="name">res.company.header.html.form</field>
+        <field name="model">ir.header_webkit</field>
+        <field name="inherit_id" ref="report_webkit.header_webkit"/>
+        <field name="arch" type="xml">
+            <field name="format" position="after">
+                <field name="scale"/>
+            </field>
+        </field>
+    </record>
+
+    </data>
+</openerp>
