@@ -22,6 +22,7 @@
 {
     'name': 'Webkit Report Zoom',
     'version': '1.0',
+    'summary': 'Add scale option',
     'description': """
 Extend WebKit Report Engine with Zoom option. 
 =============================================
