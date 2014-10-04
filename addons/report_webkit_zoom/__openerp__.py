@@ -21,7 +21,7 @@
 
 {
     'name': 'Webkit Report Zoom',
-    'version': '1.0',
+    'version': '1.1',
     'summary': 'Add scale option',
     'description': """
 Extend WebKit Report Engine with Zoom option. 
@@ -29,6 +29,7 @@ Extend WebKit Report Engine with Zoom option.
 Feature:
 --------
     * Scale definition
+    * Support unicode template
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
