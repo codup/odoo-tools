@@ -32,6 +32,7 @@ Usefull if you use WSGI deployment.
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
+    'images': ['static/description/icon.png'],
     'depends': [],
     'demo': [],
     'data': [
