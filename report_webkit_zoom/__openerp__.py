@@ -33,6 +33,7 @@ Feature:
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
+    'images': ['static/description/icon.png'],
     'category': 'Reporting',
     'sequence': 0,
     'depends': ['report_webkit'],

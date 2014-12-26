@@ -95,6 +95,7 @@ def create_single_pdf(self, cursor, uid, ids, data, report_xml, context=None):
     parser_instance.localcontext['helper'] = helper
     parser_instance.localcontext['css'] = css
     parser_instance.localcontext['_'] = translate_call
+    parser_instance.localcontext['context'] = context
 
     # apply extender functions
     additional = {}
