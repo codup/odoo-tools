@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2016 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -33,8 +33,7 @@ Feature:
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
-    'images': ['static/description/icon.png'],
-    'category': 'Reporting',
+    'category': 'Productivity',
     'sequence': 0,
     'depends': ['report_webkit'],
     'data': ['header_view.xml'],
