@@ -2,24 +2,28 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2017-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
-class MapSettings(models.TransientModel):
-    _inherit = 'base.config.settings'
+class ResConfigSettings(models.TransientModel):
+    _inherit = 'res.config.settings'
 
     google_maps_api_key = fields.Char('Google Maps API Key')
 
-    def set_google_maps_api_key(self):
-        self.env['ir.config_parameter'].set_param(
-            'google_maps_api_key', (self.google_maps_api_key or '').strip(), groups=['base.group_system'])
+    def set_values(self):
+        super(ResConfigSettings, self).set_values()
+        set_param = self.env['ir.config_parameter'].set_param
+        set_param('google_maps_api_key', (self.google_maps_api_key or '').strip())
 
-    def get_default_google_maps_api_key(self, fields):
-        google_maps_api_key = self.env['ir.config_parameter'].get_param('google_maps_api_key', default='')
-        return dict(google_maps_api_key=google_maps_api_key)
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+    @api.model
+    def get_values(self):
+        res = super(ResConfigSettings, self).get_values()
+        get_param = self.env['ir.config_parameter'].sudo().get_param
+        res.update(
+            google_maps_api_key=get_param('google_maps_api_key', default=''),
+        )
+        return res

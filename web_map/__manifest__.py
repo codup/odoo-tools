@@ -1,14 +1,14 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2017-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Web Map',
-    'version': '0.1',
+    'version': '0.2',
     'category': 'Extra Tools',
     'summary': 'Map widget',
     'description': """
