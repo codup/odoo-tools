@@ -1,14 +1,14 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2014-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Cron',
-    'version': '2.0',
+    'version': '2.1',
     'category': 'Extra Tools',
     'summary': 'WSGI cron control',
     'description': """
@@ -27,4 +27,3 @@ Usefull if you use WSGI deployment.
     ],
     'installable': True,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
