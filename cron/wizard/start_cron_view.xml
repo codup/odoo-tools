@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <form string="Start cron" version="7.0">
                     <separator colspan="4" string="Do you really want to Add new cron?" />
-                    <label string="Be carefully! Each added cron take resource from your server and don't release them until you restart server."/>
+                    <label for="name" string="Be carefully! Each added cron take resource from your server and don't release them until you restart server."/>
                     <footer>
                         <button name="start_cron" string="Add cron" type="object" class="oe_highlight"/>
                     </footer>
