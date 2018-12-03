@@ -6,9 +6,9 @@
         <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='integration']" position="inside">
-                <div class="col-xs-12 col-md-6 o_setting_box" id="gmap">
+                <div class="col-12 col-lg-6 o_setting_box" id="gmap">
                     <div class="o_setting_right_pane">
-                        <label string="Google Maps"/>
+                        <span class="o_form_label">Google Maps</span>
                         <div class="text-muted">
                             Follow <a href="https://console.developers.google.com/flows/enableapi?apiid=maps_backend,static_maps_backend&amp;keyType=CLIENT_SIDE&amp;reusekey=true">the instructions</a> to create your key.
                         </div>
