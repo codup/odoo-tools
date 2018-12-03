@@ -8,7 +8,7 @@
 
 {
     'name': 'Cron',
-    'version': '2.1',
+    'version': '2.2',
     'category': 'Extra Tools',
     'summary': 'WSGI cron control',
     'description': """
