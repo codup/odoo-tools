@@ -21,6 +21,9 @@ var FieldMap = AbstractField.extend({
 
         this.getParent().getParent().on('view_updated', self, function() {
             self.update_map();
+            self.getParent().$('a[data-toggle="tab"]').on('shown.bs.tab', function() {
+                self.update_map();
+            });
         });
         return this._super();
     },
@@ -50,8 +53,9 @@ var FieldMap = AbstractField.extend({
         }
     },
     update_map: function() {
-        if(!this.isMap) {
+        if(!this.isMap && this.el.offsetWidth > 0) {
             this.init_map();
+            this.isMap = true;
         }
         this.update_mode();
     },
@@ -95,8 +99,6 @@ var FieldMap = AbstractField.extend({
         this.marker.addListener('dragend', function() {
             self._setValue(JSON.stringify({position:self.marker.getPosition(),zoom:self.map.getZoom()}));
         });
-        
-        this.isMap = true;
     },
 });
 
